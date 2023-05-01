@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+
+namespace AreaOfFigures
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string figure = Console.ReadLine();
+            double area = 0;
+
+            if (figure == "square")
+            {
+                double side = double.Parse(Console.ReadLine());
+                area = side * side; 
+            }
+            else if (figure == "rectangle")
+            {
+                double side1 = double.Parse(Console.ReadLine());
+                double side2 = double.Parse(Console.ReadLine());
+                area = side1 *  side2 ;
+            }
+            else if (figure == "circle")
+            {
+                double r = double.Parse(Console.ReadLine());
+                area = r * r * Math.PI;
+            }
+            else if (figure == "triangle")
+            {
+                double side3 = double.Parse(Console.ReadLine());
+                double h = double.Parse(Console.ReadLine());
+                area = (side3 * h)/2;
+            }
+            Console.WriteLine(area);
+
+        }
+    }
+}
